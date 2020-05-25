@@ -1,0 +1,10 @@
+*sound after installing all drives
+*all system are started
+*hello i am sam
+*good mornig
+*Date + time
+*wheather
+*humadity
+*atmospheric presure
+*now i am ready for u command
+*after user cammand + before reply sound

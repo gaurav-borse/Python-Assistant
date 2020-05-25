@@ -1,0 +1,3 @@
+open cmd where PyAudio wheel file is downloaded nd type command as "pip install <PyAudio_file_name>.whl
+
+nd it will install PyAudio in ur system
