@@ -188,10 +188,10 @@ def open_application(query):
         os.startfile("C:\\Users\\gbors\\Desktop")
         return
 
-    elif 'my computer' in query:
-        speak("Opening My Computer")
-        os.system('This PC')
-        return
+    # elif 'my computer' in query:
+    #     speak("Opening My Computer")
+    #     os.system('This PC')
+    #     return
 
     else:
         speak("Application not available")
