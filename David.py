@@ -23,6 +23,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import pyautogui #to take a screenshot
+import pyjokes #to tell as a joke.
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -282,6 +283,11 @@ def battery():
     speak("Battery is at")
     speak(battery.percent)
 
+def jokes():
+    speak("of course, Here it is.")
+    speak(pyjokes.get_joke())
+
+
 def authentication():
     speak("Hello and Welcome sir, I am david. Your Digital Assistant.")
     speak("Sir, I need to authenticate you. Because, this program is only for authorized users.")
@@ -428,8 +434,8 @@ def TakePhoto():
         cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    # authentication()
-    # online()
+    authentication()
+    online()
     #speak("Hello sir, this program is only for authenticate user. Unauthorised person cannot use me. If you are authorised user then please authenticate yourself with your speacial word")
     while True:
         # Logic for executing tasks based on query
@@ -453,6 +459,11 @@ if __name__ == "__main__":
         elif 'battery' in query:
             battery()
     #//CPU and Battery Usage
+
+    #jokes
+        elif 'joke' in query:
+            jokes()
+    #//jokes
 
     #Change Wallpaper
         elif 'change desktop wallpaper' in query or 'change wallpaper' in query:
