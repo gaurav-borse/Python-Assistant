@@ -446,11 +446,13 @@ if __name__ == "__main__":
             open_application(query.lower())
     #//Open Application
 
+    #CPU and Battery Usage
         elif 'cpu' in query:
             cpu()
 
         elif 'battery' in query:
             battery()
+    #//CPU and Battery Usage
 
     #Change Wallpaper
         elif 'change desktop wallpaper' in query or 'change wallpaper' in query:
