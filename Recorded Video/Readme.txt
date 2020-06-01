@@ -1,0 +1,1 @@
+All videos captured by this program are saved here.

@@ -1,0 +1,1 @@
+All photos clicked by this program are saved here.
