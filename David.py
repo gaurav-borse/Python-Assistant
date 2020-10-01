@@ -24,6 +24,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import pyautogui #to take a screenshot
 import pyjokes #to tell as a joke.
+from pygame import mixer
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -622,13 +623,15 @@ if __name__ == "__main__":
 
     #playing audio music ( randomly selects a song to play from specified directory )
         elif ( 'play music' in query ) or ( 'play musics' in query )or ( 'play song' in query )or ( 'play songs' in query):
-            path="F:\\Songs\\" 
-            files=os.listdir(path)
-            d=random.choice(files)
-            speak("Opening Groove Music. Enjoy ur music sir")
-            os.startfile(path + d)
-    #//playing audio music ( randomly selects a song to play from specified directory )
-
+           speak('Playing Music ')
+            music_dir = 'full_path_of song'
+            mixer.init()
+            mixer.music.load('music_dir')
+            mixer.music.play()
+     #stops the music
+        elif 'stop music' in query:
+            mixer.music.stop()
+    
     #time and data
         elif 'time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
