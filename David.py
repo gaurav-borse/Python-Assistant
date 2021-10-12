@@ -71,8 +71,9 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('gborse3215@gmail.com','@gaurav@')
-    server.sendmail('gborse3215@gmail.com', to, content)
+    #Add your email here
+    server.login('youremail.gmail.com','#yourpasshere#')
+    server.sendmail('youremail.gmail.com', to, content)
     server.close()
 
 #Command as : search on youtube carryminati 
@@ -487,7 +488,7 @@ if __name__ == "__main__":
             search_web(query.lower())
     #//search
 
-    #Folder Management
+    #Folder Management System
         elif ('create folder' in query) or ('create a folder' in query) or ('create directory' in query) or ('create a directory' in query):
             print("Instructions : Please answer in Yes or NO ")
             speak("Sir, i need your confirmation. Do you wish to create a directory..?")
